@@ -43,7 +43,8 @@ export default function HomePage() {
     email: COMPANY.email,
     telephone: COMPANY.phone,
     address: { "@type": "PostalAddress", streetAddress: COMPANY.address },
-    openingHours: "Mo-Su 00:00-23:59",
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.5", reviewCount: "239" },
+    openingHours: "Mo-Sa 08:00-18:00, Su 10:00-16:00",
     priceRange: "$$",
     knowsAbout: ["Roadside Assistance", "Tire Repair", "Jump Start", "Towing", "Lockout Service", "Fuel Delivery"],
   };

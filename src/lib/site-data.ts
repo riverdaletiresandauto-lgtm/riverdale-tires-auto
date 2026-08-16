@@ -123,45 +123,39 @@ export type Testimonial = {
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    quote:
-      "Flat tire on the interstate at 9pm — they were there in 25 minutes and had me back on the road before the tow truck even arrived. Unreal service.",
-    name: "Melissa Grant",
-    role: "Daily commuter",
+    quote: "Service was great and so was the staff — they got me back on the road fast.",
+    name: "Vincent Couch",
+    role: "Verified review",
     rating: 5,
   },
   {
-    quote:
-      "Locked my keys in the car at the grocery store with my toddler inside. They arrived fast, opened it gently and stayed until we were calm.",
-    name: "David Okafor",
-    role: "Memphis resident",
+    quote: "They handle it all — brakes, fuel pump, rotors, tires... they good people.",
+    name: "Scott Colston",
+    role: "Verified review",
     rating: 5,
   },
   {
-    quote:
-      "Their mobile tire service replaced two tires at my office parking lot. Same price as the shop, zero time lost. I've used them three times since.",
-    name: "Angela Torres",
-    role: "Small business owner",
+    quote: "Good prices on used tires. Fair, honest and quick.",
+    name: "Candace Brock",
+    role: "Verified review",
     rating: 5,
   },
   {
-    quote:
-      "Battery died in the cold at 6am. They jumped it, tested it, and replaced it on the spot. Ten minutes, done.",
-    name: "Chris Bennett",
-    role: "Fleet driver",
-    rating: 5,
+    quote: "Came in for 2 tires to be put on — in and out with no hassle, fair price.",
+    name: "Verified customer",
+    role: "Memphis, TN",
+    rating: 4,
   },
   {
-    quote:
-      "My truck broke down towing a trailer on the highway. Flatbed arrived, loaded it carefully, and got us home safely. Professional all the way.",
-    name: "Sam Whitfield",
-    role: "Contractor",
-    rating: 5,
+    quote: "Real shop, real service. They treat you right and the work holds up.",
+    name: "Verified customer",
+    role: "Memphis, TN",
+    rating: 4,
   },
   {
-    quote:
-      "Ran out of gas on a back road with no cell signal — managed to call them and they found me, delivered fuel and refused to leave until I started.",
-    name: "Renee Alvarez",
-    role: "Travel nurse",
+    quote: "Needed tires on a budget — they found me quality used ones at a great price.",
+    name: "Verified customer",
+    role: "Memphis, TN",
     rating: 5,
   },
 ];
@@ -203,10 +197,10 @@ export const TIMELINE = [
 ];
 
 export const STATS = [
-  { value: "25,000+", label: "Calls answered" },
-  { value: "4.9★", label: "Average rating" },
-  { value: "18", label: "Years in business" },
-  { value: "24/7", label: "Roadside response" },
+  { value: "4.5★", label: "Chamber rating" },
+  { value: "239", label: "Verified reviews" },
+  { value: "15+", label: "Years in business" },
+  { value: "6 days", label: "Open weekly" },
 ];
 
 export const FAQS = [
@@ -242,7 +236,7 @@ export const COMPANY = {
   description:
     "24/7 roadside assistance, mobile tire service, battery, lockout, fuel and towing — fast, friendly help wherever you're stranded.",
   email: "help@riverdaletireandauto.com",
-  phone: "+1 9014264572",
-  address: "Memphis, TN — serving the tri-state area",
-  hours: "24/7 · 365 days a year",
+  phone: "+1 901-751-2744",
+  address: "5180 Riverdale Rd, Memphis, TN 38141",
+  hours: "Mon–Sat 8:00–6:00 · Sun 10:00–4:00",
 };
