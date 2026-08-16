@@ -171,25 +171,25 @@ export const TEAM = [
     name: "Marcus Rivera",
     title: "Founder & Lead Technician",
     bio: "20 years in tires and roadside recovery — built Riverdale Tires on the promise of fast, honest help.",
-    image: "https://i.pravatar.cc/300?img=13",
+    image: "/images/team-1.jpg",
   },
   {
     name: "Tanya Brooks",
     title: "Dispatch Manager",
     bio: "The voice on the phone at 2am. Coordinates every truck, every call, every minute.",
-    image: "https://i.pravatar.cc/300?img=47",
+    image: "/images/team-2.jpg",
   },
   {
     name: "Eduardo Salas",
     title: "Senior Tire Technician",
     bio: "Master of the impact wrench — can mount, balance and match any tire in his sleep.",
-    image: "https://i.pravatar.cc/300?img=68",
+    image: "/images/team-3.jpg",
   },
   {
     name: "Kim Park",
     title: "Towing & Recovery Lead",
     bio: "Flatbed operator with 10,000+ safe loads and a record of zero damage claims.",
-    image: "https://i.pravatar.cc/300?img=45",
+    image: "/images/team-4.jpg",
   },
 ];
 
