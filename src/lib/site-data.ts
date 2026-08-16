@@ -133,7 +133,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       "Locked my keys in the car at the grocery store with my toddler inside. They arrived fast, opened it gently and stayed until we were calm.",
     name: "David Okafor",
-    role: "Riverdale resident",
+    role: "Memphis resident",
     rating: 5,
   },
   {
@@ -170,7 +170,7 @@ export const TEAM = [
   {
     name: "Marcus Rivera",
     title: "Founder & Lead Technician",
-    bio: "20 years in tires and roadside recovery — built Riverdale on the promise of fast, honest help.",
+    bio: "20 years in tires and roadside recovery — built Riverdale Tires on the promise of fast, honest help.",
     image: "https://i.pravatar.cc/300?img=13",
   },
   {
@@ -199,7 +199,7 @@ export const TIMELINE = [
   { year: "2016", title: "Towing fleet", text: "Brought flatbed towing and accident recovery in-house." },
   { year: "2020", title: "Expanded coverage", text: "Full roadside coverage — tires, battery, lockout, fuel and towing." },
   { year: "2023", title: "25,000 calls", text: "Hit 25,000 successful roadside rescues and a 4.9-star average." },
-  { year: "2026", title: "Today", text: "A 12-person team with 8 service vehicles covering Riverdale and beyond." },
+  { year: "2026", title: "Today", text: "A 12-person team with 8 service vehicles covering Memphis and the tri-state area." },
 ];
 
 export const STATS = [
@@ -212,7 +212,7 @@ export const STATS = [
 export const FAQS = [
   {
     q: "How fast can you get to me?",
-    a: "Average response time is 30–45 minutes across Riverdale, faster in the city core. We give you a live ETA when you call and track every truck.",
+    a: "Average response time is 30–45 minutes across Memphis, faster in the city core. We give you a live ETA when you call and track every truck.",
   },
   {
     q: "Do you really work 24/7?",
@@ -220,7 +220,7 @@ export const FAQS = [
   },
   {
     q: "What areas do you cover?",
-    a: "All of Riverdale and the surrounding county, including the interstate corridors. Long-distance towing available on request.",
+    a: "All of Memphis, West Tennessee, North Mississippi and East Arkansas — plus interstate corridors across the tri-state area. Long-distance towing available on request.",
   },
   {
     q: "Do you replace tires on the spot?",
@@ -243,6 +243,6 @@ export const COMPANY = {
     "24/7 roadside assistance, mobile tire service, battery, lockout, fuel and towing — fast, friendly help wherever you're stranded.",
   email: "help@riverdaletireandauto.com",
   phone: "+1 9014264572",
-  address: "412 Oak Street, Riverdale",
+  address: "Memphis, TN — serving the tri-state area",
   hours: "24/7 · 365 days a year",
 };

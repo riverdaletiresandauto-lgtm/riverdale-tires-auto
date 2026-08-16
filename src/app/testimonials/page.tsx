@@ -75,7 +75,7 @@ export default function TestimonialsPage() {
             <div className="glass rounded-3xl p-10 text-center">
               <h2 className="text-2xl font-bold text-primary">Ready to join our clients?</h2>
               <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-                Experience the Riverdale difference — fast, friendly roadside help from a team that answers 24/7.
+                Experience the Riverdale Tires difference — fast, friendly roadside help across Memphis and the tri-state, 24/7.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-4">
                 <Link href="/contact" className="btn-gradient">

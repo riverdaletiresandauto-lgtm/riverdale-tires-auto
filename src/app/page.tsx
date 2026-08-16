@@ -37,7 +37,7 @@ export default function HomePage() {
     "@type": "AutoRepair",
     name: "Riverdale Tires and Auto",
     description:
-      "24/7 roadside assistance, mobile tire repair, jump start, lockout, fuel delivery and towing in Riverdale.",
+      "24/7 roadside assistance, mobile tire repair, jump start, lockout, fuel delivery and towing in Memphis and the tri-state area.",
     url: "https://riverdale-tires-auto.amsitservices.com",
     image: "https://riverdale-tires-auto.amsitservices.com/images/hero.jpg",
     email: COMPANY.email,
@@ -130,7 +130,7 @@ export default function HomePage() {
       <section className="section-pad relative">
         <div className="container-site">
           <SectionHeading
-            eyebrow="Why Riverdale"
+            eyebrow="Why Riverdale Tires"
             title="Fast, friendly help — every time"
             subtitle="One call covers every roadside emergency, backed by 18 years of service."
           />
@@ -251,10 +251,10 @@ export default function HomePage() {
                 <MapPin className="h-7 w-7" />
               </span>
               <div>
-                <h2 className="text-xl font-bold text-primary">Proudly serving Riverdale &amp; beyond</h2>
+                <h2 className="text-xl font-bold text-primary">Proudly serving Memphis &amp; the tri-state area</h2>
                 <p className="mt-1 text-muted-foreground">
-                  All of Riverdale, the surrounding county, and interstate corridors — including
-                  long-distance towing on request.
+                  All of Memphis, West Tennessee, North Mississippi and East Arkansas — including
+                  interstate corridors and long-distance towing on request.
                 </p>
               </div>
               <Link href="/contact" className="btn-gradient shrink-0">

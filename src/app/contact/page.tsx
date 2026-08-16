@@ -158,7 +158,7 @@ export default function ContactPage() {
               <div className="overflow-hidden rounded-3xl border border-white/60 shadow-[0_8px_32px_rgba(30,58,95,0.08)]">
                 <iframe
                   title="Riverdale Tires and Auto service area"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=-95.42%2C29.68%2C-95.30%2C29.78&layer=mapnik&marker=29.73%2C-95.36"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=-90.25%2C34.90%2C-89.75%2C35.30&layer=mapnik&marker=35.15%2C-90.05"
                   className="h-64 w-full border-0"
                   loading="lazy"
                 />

@@ -22,7 +22,7 @@ const PLANS = [
       "Spare installation $25",
       "Tire replacement from $120 + tire",
       "TPMS reset included",
-      "Mobile service anywhere in Riverdale",
+      "Mobile service anywhere in Memphis & the tri-state",
     ],
     cta: "Request tire help",
     featured: false,

@@ -45,7 +45,7 @@ export default function AboutPage() {
             </FadeUp>
             <FadeUp delay={0.08}>
               <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-primary sm:text-5xl">
-                Riverdale&apos;s most <span className="text-accent">trusted roadside team</span>
+                Memphis&apos;s most <span className="text-accent">trusted roadside team</span>
               </h1>
             </FadeUp>
             <FadeUp delay={0.16}>
