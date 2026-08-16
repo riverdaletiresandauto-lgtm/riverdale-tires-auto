@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
-import { Mail, Phone, MapPin, Clock, Send, Loader2, Zap } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, Loader2, Zap, CheckCircle2 } from "lucide-react";
 import { COMPANY, SERVICES } from "@/lib/site-data";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,7 +21,7 @@ import {
 import { FadeUp, Stagger, StaggerItem } from "@/components/motion";
 
 const GOOGLE_FORM_BASE =
-  "https://docs.google.com/forms/d/e/1FAIpQLScxTNw31tZ6b5-Ysrkl_tzZ1TrbcCVhh_hopIUxeNIP1kkwsQ/viewform";
+  "https://docs.google.com/forms/d/e/1FAIpQLScxTNw31tZ6b5-Ysrkl_tzZ1TrbcCVhh_hopIUxeNIP1kkwsQ/formResponse";
 
 // Maps our field names to the Google Form entry IDs
 const FORM_ENTRIES: Record<string, string> = {
@@ -48,6 +48,7 @@ type QuoteForm = z.infer<typeof quoteSchema>;
 
 export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const {
     register,
@@ -65,32 +66,33 @@ export default function ContactPage() {
     return svc ? svc.title : slug === "other" ? "Other / Not sure" : slug;
   }
 
-  function onSubmit(data: QuoteForm) {
+  async function onSubmit(data: QuoteForm) {
     // honeypot check — silently drop bot submissions
     if (data.website && data.website.length > 0) {
-      toast.success("Message sent!");
-      reset();
+      setSubmitted(true);
       return;
     }
     setSubmitting(true);
     try {
-      // Build the prefilled Google Form URL with the user's values
-      const params = new URLSearchParams({ usp: "pp_url" });
+      // Submit to the Google Form in the background (no redirect)
+      const params = new URLSearchParams();
       params.set(FORM_ENTRIES.name, data.name);
       params.set(FORM_ENTRIES.email, data.email);
       params.set(FORM_ENTRIES.phone, data.phone || "");
       params.set(FORM_ENTRIES.company, data.company || "");
       params.set(FORM_ENTRIES.service, serviceLabel(data.service));
       params.set(FORM_ENTRIES.message, data.message);
-      const url = `${GOOGLE_FORM_BASE}?${params.toString()}`;
-      window.open(url, "_blank", "noopener,noreferrer");
-      toast.success("Almost done!", {
-        description: "Your details are pre-filled — just hit submit on the form that opened.",
+      await fetch(GOOGLE_FORM_BASE, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: params.toString(),
       });
+      setSubmitted(true);
       reset({ name: "", email: "", phone: "", company: "", service: "", message: "", website: "" });
     } catch {
       toast.error("Something went wrong", {
-        description: "Please try again, or email us directly.",
+        description: "Please try again, or call us directly.",
       });
     } finally {
       setSubmitting(false);
@@ -166,9 +168,36 @@ export default function ContactPage() {
             </StaggerItem>
           </Stagger>
 
-          {/* Form */}
+          {/* Form / Success */}
           <FadeUp className="lg:col-span-3">
-            <form onSubmit={handleSubmit(onSubmit)} className="glass rounded-3xl p-8" noValidate>
+            {submitted ? (
+              <div className="glass flex flex-col items-center rounded-3xl p-10 text-center">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/15 text-accent">
+                  <CheckCircle2 className="h-9 w-9" />
+                </span>
+                <h2 className="mt-6 text-2xl font-bold text-primary">Recorded!</h2>
+                <p className="mt-3 max-w-md text-lg font-semibold text-foreground">
+                  We will call you back within 15 minutes.
+                </p>
+                <p className="mt-2 max-w-md text-muted-foreground">
+                  If you don&apos;t hear from us, please call us back on{" "}
+                  <a
+                    href={`tel:${COMPANY.phone.replace(/[^+\d]/g, "")}`}
+                    className="font-bold text-accent underline-offset-2 hover:underline"
+                  >
+                    {COMPANY.phone}
+                  </a>
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(false)}
+                  className="btn-glass mt-8"
+                >
+                  Send another message
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit(onSubmit)} className="glass rounded-3xl p-8" noValidate>
               {/* honeypot — hidden from humans */}
               <div className="absolute -left-[9999px]" aria-hidden="true">
                 <Label htmlFor="website">Website</Label>
@@ -232,11 +261,11 @@ export default function ContactPage() {
               >
                 {submitting ? (
                   <>
-                    <Loader2 className="h-4 w-4 animate-spin" /> Opening form…
+                    <Loader2 className="h-4 w-4 animate-spin" /> Sending…
                   </>
                 ) : (
                   <>
-                    <Send className="h-4 w-4" /> Continue to form
+                    <Send className="h-4 w-4" /> Send message
                   </>
                 )}
               </Button>
@@ -244,6 +273,7 @@ export default function ContactPage() {
                 We respect your privacy — your details are only used to respond to your enquiry.
               </p>
             </form>
+            )}
           </FadeUp>
         </div>
       </section>
