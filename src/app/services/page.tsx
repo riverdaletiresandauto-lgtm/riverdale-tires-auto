@@ -6,9 +6,10 @@ import { SERVICES } from "@/lib/site-data";
 import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motion";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Tire Repair, Jump Start, Towing & More — Memphis Roadside Services",
   description:
-    "24/7 roadside assistance: tire repair and replacement, jump start and battery, lockout, towing, fuel delivery and auto repair.",
+    "24/7 roadside assistance in Memphis, TN: tire repair & replacement, jump start & battery, lockout help, towing, fuel delivery and auto repair from Riverdale Tires and Auto.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

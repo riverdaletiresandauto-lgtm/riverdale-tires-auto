@@ -5,9 +5,10 @@ import { COMPANY } from "@/lib/site-data";
 import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motion";
 
 export const metadata: Metadata = {
-  title: "Pricing",
+  title: "Tire & Roadside Assistance Prices — Memphis, TN",
   description:
-    "Transparent roadside assistance pricing — flat tire, jump start, lockout, fuel delivery and towing rates from Riverdale Tires and Auto.",
+    "Honest, upfront pricing for tire repair, jump starts, lockouts, fuel delivery and towing in Memphis. From $45 — quoted before we roll a truck. Call +1 901-751-2744.",
+  alternates: { canonical: "/pricing" },
 };
 
 const PLANS = [

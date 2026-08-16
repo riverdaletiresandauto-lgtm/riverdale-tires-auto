@@ -8,9 +8,10 @@ import { EmblaCarousel } from "@/components/embla-carousel";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "24/7 Roadside Assistance, Tires & Towing",
+  title: "Tire Shop & 24/7 Roadside Assistance in Memphis, TN",
   description:
-    "Riverdale Tires and Auto — 24/7 roadside assistance, mobile tire repair, jump start, lockout, fuel delivery and towing in Riverdale.",
+    "Riverdale Tires and Auto — Memphis tire shop for tire repair, new & used tires, and 24/7 roadside assistance: jump start, lockout, fuel delivery & towing. 4.5★ rated. Call +1 901-751-2744.",
+  alternates: { canonical: "/" },
 };
 
 const FEATURES = [
@@ -35,18 +36,48 @@ export default function HomePage() {
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
+    "@id": "https://riverdaletireandauto.com/#business",
     name: "Riverdale Tires and Auto",
     description:
-      "24/7 roadside assistance, mobile tire repair, jump start, lockout, fuel delivery and towing in Memphis and the tri-state area.",
+      "Tire repair, new & used tires, and 24/7 roadside assistance in Memphis — jump starts, lockouts, fuel delivery and towing across the tri-state area.",
     url: "https://riverdaletireandauto.com",
     image: "https://riverdaletireandauto.com/images/hero.jpg",
+    logo: "https://riverdaletireandauto.com/images/logo.png",
     email: COMPANY.email,
-    telephone: COMPANY.phone,
-    address: { "@type": "PostalAddress", streetAddress: COMPANY.address },
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.5", reviewCount: "239" },
-    openingHours: "Mo-Sa 08:00-18:00, Su 10:00-16:00",
+    telephone: "+1 901-751-2744",
     priceRange: "$$",
-    knowsAbout: ["Roadside Assistance", "Tire Repair", "Jump Start", "Towing", "Lockout Service", "Fuel Delivery"],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "5180 Riverdale Rd",
+      addressLocality: "Memphis",
+      addressRegion: "TN",
+      postalCode: "38141",
+      addressCountry: "US",
+    },
+    geo: { "@type": "GeoCoordinates", latitude: 35.0441815, longitude: -89.8307307 },
+    hasMap: "https://www.google.com/maps?cid=9132951130505582979",
+    areaServed: [
+      { "@type": "City", name: "Memphis" },
+      { "@type": "State", name: "West Tennessee" },
+      { "@type": "State", name: "North Mississippi" },
+      { "@type": "State", name: "East Arkansas" },
+    ],
+    openingHoursSpecification: [
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "08:00", closes: "18:00" },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "16:00" },
+    ],
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.5", reviewCount: "239" },
+    knowsAbout: ["Tire Repair", "Used Tires", "New Tires", "Roadside Assistance", "Jump Start", "Towing", "Lockout Service", "Fuel Delivery"],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   };
 
   return (
@@ -54,6 +85,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* ================= HERO ================= */}

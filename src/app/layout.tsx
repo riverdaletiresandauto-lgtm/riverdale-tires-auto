@@ -19,25 +19,33 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://riverdaletireandauto.com"),
   title: {
-    default: "Riverdale Tires and Auto — 24/7 Roadside Assistance",
-    template: "%s | Riverdale Tires and Auto",
+    default: "Riverdale Tires and Auto | Tire Shop & 24/7 Roadside Assistance in Memphis, TN",
+    template: "%s | Riverdale Tires and Auto — Memphis, TN",
   },
   description:
-    "24/7 roadside assistance, mobile tire repair and replacement, jump start, lockout, fuel delivery and towing in Memphis and the tri-state area. Fast, friendly help wherever you're stranded.",
+    "Tire repair, replacement & 24/7 roadside assistance in Memphis, TN. Jump starts, lockouts, fuel delivery & towing across the tri-state area. Call +1 901-751-2744.",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Riverdale Tires and Auto — 24/7 Roadside Assistance",
+    title: "Riverdale Tires and Auto | Tire Shop & 24/7 Roadside Assistance in Memphis, TN",
     description:
-      "Tires, battery, lockout, fuel and towing — 24/7 roadside help from Memphis's most trusted auto team.",
+      "Tires, battery, lockout, fuel and towing — 24/7 roadside help from Memphis's most trusted auto team. Call +1 901-751-2744.",
     type: "website",
     url: "https://riverdaletireandauto.com",
-    images: [{ url: "https://riverdaletireandauto.com/images/hero.jpg", width: 1200, height: 675, alt: "Riverdale Tires and Auto roadside assistance" }],
+    siteName: "Riverdale Tires and Auto",
+    locale: "en_US",
+    images: [{ url: "https://riverdaletireandauto.com/images/hero.jpg", width: 1200, height: 675, alt: "Riverdale Tires and Auto roadside assistance in Memphis" }],
   },
   twitter: {
     card: "summary",
-    title: "Riverdale Tires and Auto — 24/7 Roadside Assistance",
+    title: "Riverdale Tires and Auto | 24/7 Roadside Assistance in Memphis, TN",
     description:
       "Tires, battery, lockout, fuel and towing — 24/7 roadside help from Memphis's most trusted auto team.",
     images: ["https://riverdaletireandauto.com/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
 };
 

@@ -17,8 +17,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = SERVICES.find((s) => s.slug === slug);
   if (!service) return { title: "Service not found" };
   return {
-    title: service.title,
-    description: service.tagline,
+    title: `${service.title} in Memphis, TN — 24/7 Roadside Help`,
+    description: `${service.tagline} Riverdale Tires and Auto in Memphis serves the tri-state area. Call +1 901-751-2744.`,
+    alternates: { canonical: `/services/${service.slug}` },
   };
 }
 
@@ -29,8 +30,27 @@ export default async function ServicePage({ params }: PageProps) {
 
   const others = SERVICES.filter((s) => s.slug !== slug);
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.description,
+    provider: {
+      "@type": "AutoRepair",
+      name: "Riverdale Tires and Auto",
+      telephone: "+1 901-751-2744",
+      address: { "@type": "PostalAddress", streetAddress: "5180 Riverdale Rd", addressLocality: "Memphis", addressRegion: "TN", postalCode: "38141", addressCountry: "US" },
+    },
+    areaServed: ["Memphis", "West Tennessee", "North Mississippi", "East Arkansas"],
+    availableChannel: { "@type": "ServiceChannel", serviceUrl: `https://riverdaletireandauto.com/services/${service.slug}`, servicePhone: "+1 901-751-2744" },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <section className="relative overflow-hidden pt-28 pb-12">
         <div className="blob right-[-10%] top-[-5%] h-[30rem] w-[30rem] bg-accent/15" />
         <div className="container-site relative grid items-center gap-12 lg:grid-cols-2">

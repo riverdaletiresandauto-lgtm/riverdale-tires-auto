@@ -5,9 +5,10 @@ import { TEAM, TIMELINE } from "@/lib/site-data";
 import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motion";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Our Memphis Tire Shop & Roadside Team",
   description:
-    "Riverdale Tires and Auto — 18 years of 24/7 roadside assistance, mobile tires and towing. Meet the team behind 25,000+ rescues.",
+    "Riverdale Tires and Auto in Memphis, TN — 15+ years of tire service, auto repair and roadside assistance. Meet the team behind 239 five-star reviews.",
+  alternates: { canonical: "/about" },
 };
 
 const WHY = [
