@@ -8,7 +8,7 @@ export function AlertBanner({ message = "24/7 emergency HVAC service — call ou
   if (!visible) return null;
   return (
     <div className="fixed inset-x-0 top-0 z-[60]">
-      <div className="flex items-center justify-center gap-3 bg-gradient-to-r from-primary via-[#244b7a] to-[#2a5a92] px-10 py-2.5 text-center text-sm text-white shadow-lg">
+      <div className="flex items-center justify-center gap-3 bg-gradient-to-r from-[#1a1a1a] via-[#2a2a2a] to-[#3d3d3d] px-10 py-2.5 text-center text-sm text-white shadow-lg">
         <Megaphone className="h-4 w-4 shrink-0 text-accent" />
         <span className="truncate">{message}</span>
         <button

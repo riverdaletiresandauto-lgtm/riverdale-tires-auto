@@ -84,7 +84,7 @@ export default function PricingPage() {
                 <div
                   className={`relative flex h-full flex-col rounded-3xl p-8 transition-all duration-300 ${
                     p.featured
-                      ? "bg-gradient-to-br from-primary via-[#244b7a] to-[#2a5a92] text-white shadow-2xl shadow-primary/30 lg:-translate-y-3"
+                      ? "bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#3d3d3d] text-white shadow-2xl shadow-black/30 lg:-translate-y-3"
                       : "glass-card"
                   }`}
                 >
@@ -97,7 +97,7 @@ export default function PricingPage() {
                     className={`flex h-12 w-12 items-center justify-center rounded-2xl ${
                       p.featured
                         ? "bg-white/15 text-white"
-                        : "bg-gradient-to-br from-primary to-[#2a5a92] text-white shadow-md shadow-primary/25"
+                        : "bg-gradient-to-br from-[#eab308] to-[#d99e06] text-primary-foreground shadow-md shadow-primary/25"
                     }`}
                   >
                     <p.icon className="h-6 w-6" />
@@ -148,7 +148,7 @@ export default function PricingPage() {
           <FadeUp className="mt-12">
             <div className="glass flex flex-col items-center justify-between gap-6 rounded-3xl p-8 md:flex-row">
               <div className="flex items-center gap-4">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-[#2a5a92] text-white">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#eab308] to-[#d99e06] text-primary-foreground">
                   <PhoneCall className="h-6 w-6" />
                 </span>
                 <div>

@@ -40,7 +40,7 @@ export default function TestimonialsPage() {
                     "{t.quote}"
                   </blockquote>
                   <figcaption className="mt-6 flex items-center gap-3 border-t border-primary/10 pt-4">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-primary to-[#2a5a92] font-bold text-white">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#eab308] to-[#d99e06] font-bold text-primary-foreground">
                       {t.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
                     </span>
                     <div>

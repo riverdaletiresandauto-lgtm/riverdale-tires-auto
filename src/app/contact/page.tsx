@@ -135,7 +135,7 @@ export default function ContactPage() {
                   href={c.href ?? "#"}
                   className={`glass-card flex items-start gap-4 p-6 ${c.href ? "" : "cursor-default"}`}
                 >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-[#2a5a92] text-white">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#eab308] to-[#d99e06] text-primary-foreground">
                     <c.icon className="h-5 w-5" />
                   </span>
                   <div>

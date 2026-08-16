@@ -7,7 +7,7 @@ export default function NotFound() {
       <div className="blob left-[10%] top-[10%] h-72 w-72 bg-accent/20" />
       <div className="blob bottom-[5%] right-[10%] h-80 w-80 bg-primary/15" />
       <div className="glass relative max-w-lg rounded-3xl p-12 text-center">
-        <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-[#2a5a92] text-white shadow-lg shadow-primary/25">
+        <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#eab308] to-[#d99e06] text-primary-foreground shadow-lg shadow-primary/25">
           <Wrench className="h-8 w-8" />
         </span>
         <p className="mt-6 text-6xl font-extrabold text-primary">404</p>

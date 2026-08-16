@@ -85,7 +85,7 @@ export default function AboutPage() {
             {WHY.map((w) => (
               <StaggerItem key={w.title}>
                 <div className="glass-card h-full p-7 text-center">
-                  <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-[#2a5a92] text-white">
+                  <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#eab308] to-[#d99e06] text-primary-foreground">
                     <w.icon className="h-6 w-6" />
                   </span>
                   <h3 className="mt-5 text-base font-semibold text-primary">{w.title}</h3>

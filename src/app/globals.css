@@ -28,64 +28,64 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ============ minilamisam — glassmorphism light theme ============ */
-/* Primary: deep architectural slate-blue. Accent: warm amber. */
+/* ============ Riverdale Tires — yellow & white theme ============ */
+/* Primary: warm yellow. Accent: deep gold. Mostly white, black gradient accents. */
 :root {
   --radius: 0.75rem;
 
-  --background: #f7f7f5;
+  --background: #fdfcf9;
   --foreground: #1c2333;
 
-  --primary: #1e3a5f;
-  --primary-foreground: #ffffff;
+  --primary: #eab308;
+  --primary-foreground: #1c2333;
 
-  --secondary: #eef1f6;
-  --secondary-foreground: #1e3a5f;
+  --secondary: #f5f0e1;
+  --secondary-foreground: #7a5a00;
 
-  --accent: #c98a2d;
-  --accent-foreground: #ffffff;
+  --accent: #ca8a04;
+  --accent-foreground: #1c2333;
 
-  --muted: #eef0f4;
+  --muted: #f3f1ea;
   --muted-foreground: #5b6575;
 
-  --card: rgba(255, 255, 255, 0.66);
+  --card: rgba(255, 255, 255, 0.72);
   --card-foreground: #1c2333;
 
-  --popover: rgba(255, 255, 255, 0.85);
+  --popover: rgba(255, 255, 255, 0.9);
   --popover-foreground: #1c2333;
 
   --destructive: #d9534f;
-  --border: rgba(30, 58, 95, 0.12);
-  --input: rgba(30, 58, 95, 0.16);
-  --ring: rgba(201, 138, 45, 0.5);
+  --border: rgba(30, 58, 95, 0.10);
+  --input: rgba(30, 58, 95, 0.14);
+  --ring: rgba(234, 179, 8, 0.5);
 }
 
 .dark {
-  --background: #10151f;
-  --foreground: #e8ecf4;
+  --background: #141414;
+  --foreground: #f5f5f0;
 
-  --primary: #c98a2d;
-  --primary-foreground: #10151f;
+  --primary: #eab308;
+  --primary-foreground: #141414;
 
-  --secondary: #1a2233;
-  --secondary-foreground: #e8ecf4;
+  --secondary: #26261f;
+  --secondary-foreground: #f5f5f0;
 
-  --accent: #6ea8dc;
-  --accent-foreground: #10151f;
+  --accent: #facc15;
+  --accent-foreground: #141414;
 
-  --muted: #1a2233;
-  --muted-foreground: #9aa5b8;
+  --muted: #26261f;
+  --muted-foreground: #b0b0a8;
 
-  --card: rgba(20, 27, 42, 0.66);
-  --card-foreground: #e8ecf4;
+  --card: rgba(30, 30, 28, 0.7);
+  --card-foreground: #f5f5f0;
 
-  --popover: rgba(20, 27, 42, 0.9);
-  --popover-foreground: #e8ecf4;
+  --popover: rgba(28, 28, 26, 0.92);
+  --popover-foreground: #f5f5f0;
 
   --destructive: #e57373;
-  --border: rgba(232, 236, 244, 0.12);
-  --input: rgba(232, 236, 244, 0.18);
-  --ring: rgba(110, 168, 220, 0.5);
+  --border: rgba(245, 245, 240, 0.12);
+  --input: rgba(245, 245, 240, 0.18);
+  --ring: rgba(234, 179, 8, 0.5);
 }
 
 @layer base {
@@ -98,9 +98,9 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     background-image:
-      radial-gradient(60rem 60rem at 8% -10%, rgba(201, 138, 45, 0.10), transparent 55%),
-      radial-gradient(50rem 50rem at 95% 5%, rgba(30, 58, 95, 0.10), transparent 55%),
-      radial-gradient(70rem 70rem at 60% 110%, rgba(110, 168, 220, 0.10), transparent 60%);
+      radial-gradient(60rem 60rem at 8% -10%, rgba(234, 179, 8, 0.09), transparent 55%),
+      radial-gradient(50rem 50rem at 95% 5%, rgba(234, 179, 8, 0.07), transparent 55%),
+      radial-gradient(70rem 70rem at 60% 110%, rgba(202, 138, 4, 0.08), transparent 60%);
     background-attachment: fixed;
   }
 }
@@ -108,24 +108,24 @@
 @layer components {
   /* Frosted glass panel */
   .glass {
-    @apply border border-white/60 bg-white/60 backdrop-blur-xl shadow-[0_8px_32px_rgba(30,58,95,0.08)];
+    @apply border border-white/70 bg-white/70 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.06)];
   }
   .glass-card {
-    @apply rounded-2xl border border-white/60 bg-white/60 backdrop-blur-xl shadow-[0_8px_32px_rgba(30,58,95,0.08)]
-      transition-all duration-300 hover:-translate-y-1 hover:border-white/90 hover:bg-white/75
-      hover:shadow-[0_16px_48px_rgba(30,58,95,0.14)];
+    @apply rounded-2xl border border-white/70 bg-white/75 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.06)]
+      transition-all duration-300 hover:-translate-y-1 hover:border-yellow-200/80 hover:bg-white/90
+      hover:shadow-[0_16px_48px_rgba(0,0,0,0.10)];
   }
-  /* Gradient primary button */
+  /* Gradient primary button (yellow) */
   .btn-gradient {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-white
-      bg-gradient-to-r from-primary to-[#2a5a92] shadow-lg shadow-primary/25 transition-all
-      hover:shadow-xl hover:shadow-primary/35 hover:brightness-110 active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-bold text-primary-foreground
+      bg-gradient-to-r from-primary via-[#f2c40a] to-[#d99e06] shadow-lg shadow-yellow-500/25 transition-all
+      hover:shadow-xl hover:shadow-yellow-500/35 hover:brightness-105 active:scale-[0.98];
   }
   /* Glass outline secondary button */
   .btn-glass {
     @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold
-      text-primary border border-primary/25 bg-white/40 backdrop-blur-md transition-all
-      hover:bg-white/70 hover:border-primary/40 active:scale-[0.98];
+      text-primary-foreground border border-yellow-600/30 bg-white/40 backdrop-blur-md transition-all
+      hover:bg-white/70 hover:border-yellow-500/50 active:scale-[0.98];
   }
   .section-pad {
     @apply py-20 md:py-28;

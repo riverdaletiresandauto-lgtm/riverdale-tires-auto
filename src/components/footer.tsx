@@ -32,7 +32,7 @@ export function Footer() {
                 />
                 <button
                   type="submit"
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-[#2a5a92] text-white transition-all hover:brightness-110"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#eab308] to-[#d99e06] text-primary-foreground transition-all hover:brightness-110"
                   aria-label="Subscribe to newsletter"
                 >
                   <Send className="h-4 w-4" />

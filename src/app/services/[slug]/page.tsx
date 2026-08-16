@@ -141,7 +141,7 @@ export default async function ServicePage({ params }: PageProps) {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 rounded-2xl bg-gradient-to-br from-primary to-[#2a5a92] p-5 text-white">
+                <div className="mt-6 rounded-2xl bg-gradient-to-br from-[#1a1a1a] to-[#3d3d3d] p-5 text-white">
                   <p className="font-semibold">Stuck right now?</p>
                   <p className="mt-1.5 text-sm text-white/80">
                     Don&apos;t wait in a queue — call dispatch and a truck is on the way.

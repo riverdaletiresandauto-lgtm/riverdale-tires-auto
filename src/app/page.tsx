@@ -95,7 +95,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden pt-24 pb-20 sm:pt-28 sm:pb-28">
         <div className="blob left-[-10%] top-[-5%] h-[32rem] w-[32rem] bg-accent/20" />
         <div className="blob right-[-8%] top-[10%] h-[28rem] w-[28rem] bg-primary/15" />
-        <div className="blob bottom-[-20%] left-[30%] h-[30rem] w-[30rem] bg-[#6ea8dc]/15" />
+        <div className="blob bottom-[-20%] left-[30%] h-[30rem] w-[30rem] bg-[#f5c518]/15" />
 
         <div className="container-site relative grid items-center gap-12 lg:grid-cols-2">
           <div>
@@ -108,7 +108,7 @@ export default function HomePage() {
             <FadeUp delay={0.08}>
               <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-primary sm:text-5xl lg:text-6xl">
                 Stranded? We&apos;re <br />
-                <span className="bg-gradient-to-r from-primary via-[#2a5a92] to-accent bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#eab308] via-[#ca8a04] to-[#8a6a00] bg-clip-text text-transparent">
                   already on the way
                 </span>
               </h1>
@@ -283,7 +283,7 @@ export default function HomePage() {
         <div className="container-site">
           <FadeUp>
             <div className="glass flex flex-col items-center gap-6 rounded-3xl p-10 text-center md:flex-row md:text-left">
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-[#2a5a92] text-white">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#eab308] to-[#d99e06] text-primary-foreground">
                 <MapPin className="h-7 w-7" />
               </span>
               <div>
@@ -331,8 +331,8 @@ export default function HomePage() {
       <section className="section-pad relative">
         <div className="container-site">
           <FadeUp>
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-[#244b7a] to-[#2a5a92] px-8 py-14 text-center shadow-2xl shadow-primary/30 sm:px-16">
-              <div className="blob left-[10%] top-[-30%] h-64 w-64 bg-accent/30" />
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#3d3d3d] px-8 py-14 text-center shadow-2xl shadow-black/30 sm:px-16">
+              <div className="blob left-[10%] top-[-30%] h-64 w-64 bg-yellow-400/25" />
               <div className="blob bottom-[-40%] right-[10%] h-72 w-72 bg-white/10" />
               <h2 className="relative text-3xl font-bold text-white sm:text-4xl">
                 Stuck right now? Don&apos;t wait.
@@ -344,13 +344,13 @@ export default function HomePage() {
               <div className="relative mt-8 flex flex-wrap justify-center gap-4">
                 <a
                   href={`tel:${COMPANY.phone.replace(/[^+\d]/g, "")}`}
-                  className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-bold text-primary shadow-lg transition-all hover:bg-amber-50 active:scale-[0.98]"
+                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#eab308] to-[#d99e06] px-7 py-3.5 text-sm font-bold text-primary-foreground shadow-lg transition-all hover:brightness-105 active:scale-[0.98]"
                 >
                   <PhoneCall className="h-4 w-4" /> Call {COMPANY.phone}
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 active:scale-[0.98]"
+                  className="inline-flex items-center gap-2 rounded-xl border border-yellow-400/40 bg-yellow-400/10 px-7 py-3.5 text-sm font-bold text-yellow-300 backdrop-blur-md transition-all hover:bg-yellow-400/20 active:scale-[0.98]"
                 >
                   Request help online
                 </Link>
