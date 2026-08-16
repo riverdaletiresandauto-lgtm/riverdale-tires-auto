@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Clock, Globe, Share2, Rss, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, ThumbsUp, Send } from "lucide-react";
 import { COMPANY, SERVICES } from "@/lib/site-data";
 
 export function Footer() {
@@ -102,16 +102,15 @@ export function Footer() {
             <Link href="/terms" className="underline-offset-2 hover:underline">Terms of Service</Link>
           </p>
           <div className="flex items-center gap-3">
-            {[Globe, Share2, Rss].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary/15 bg-white/40 text-muted-foreground transition-all hover:border-primary/30 hover:text-primary"
-                aria-label="Social link"
-              >
-                <Icon className="h-4.5 w-4.5" />
-              </a>
-            ))}
+            <a
+              href="https://www.facebook.com/Riverdaletireautotn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary/15 bg-white/40 text-muted-foreground transition-all hover:border-primary/30 hover:text-primary"
+              aria-label="Follow Riverdale Tires and Auto on Facebook"
+            >
+              <ThumbsUp className="h-4.5 w-4.5" />
+            </a>
           </div>
         </div>
       </div>
