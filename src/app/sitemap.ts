@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SERVICES } from "@/lib/site-data";
 
-const BASE = "https://riverdale-tires-auto.amsitservices.com";
+const BASE = "https://riverdaletireandauto.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ["", "/services", "/about", "/pricing", "/testimonials", "/contact", "/privacy", "/terms"].map((r) => ({

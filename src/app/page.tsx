@@ -38,8 +38,8 @@ export default function HomePage() {
     name: "Riverdale Tires and Auto",
     description:
       "24/7 roadside assistance, mobile tire repair, jump start, lockout, fuel delivery and towing in Memphis and the tri-state area.",
-    url: "https://riverdale-tires-auto.amsitservices.com",
-    image: "https://riverdale-tires-auto.amsitservices.com/images/hero.jpg",
+    url: "https://riverdaletireandauto.com",
+    image: "https://riverdaletireandauto.com/images/hero.jpg",
     email: COMPANY.email,
     telephone: COMPANY.phone,
     address: { "@type": "PostalAddress", streetAddress: COMPANY.address },

@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://riverdale-tires-auto.amsitservices.com"),
+  metadataBase: new URL("https://riverdaletireandauto.com"),
   title: {
     default: "Riverdale Tires and Auto — 24/7 Roadside Assistance",
     template: "%s | Riverdale Tires and Auto",
@@ -29,8 +29,15 @@ export const metadata: Metadata = {
     description:
       "Tires, battery, lockout, fuel and towing — 24/7 roadside help from Memphis's most trusted auto team.",
     type: "website",
-    url: "https://riverdale-tires-auto.amsitservices.com",
-    images: [{ url: "/images/hero.jpg", width: 1200, height: 675, alt: "Riverdale Tires and Auto roadside assistance" }],
+    url: "https://riverdaletireandauto.com",
+    images: [{ url: "https://riverdaletireandauto.com/images/hero.jpg", width: 1200, height: 675, alt: "Riverdale Tires and Auto roadside assistance" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "Riverdale Tires and Auto — 24/7 Roadside Assistance",
+    description:
+      "Tires, battery, lockout, fuel and towing — 24/7 roadside help from Memphis's most trusted auto team.",
+    images: ["https://riverdaletireandauto.com/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"],
   },
 };
 
