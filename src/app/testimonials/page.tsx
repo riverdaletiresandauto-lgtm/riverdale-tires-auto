@@ -81,8 +81,8 @@ export default function TestimonialsPage() {
                 <Link href="/contact" className="btn-gradient">
                   Get a Quote <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link href="/projects" className="btn-glass">
-                  View our work
+                <Link href="/services" className="btn-glass">
+                  Our services
                 </Link>
               </div>
             </div>
