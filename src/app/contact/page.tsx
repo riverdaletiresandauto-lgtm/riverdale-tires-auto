@@ -20,6 +20,19 @@ import {
 } from "@/components/ui/select";
 import { FadeUp, Stagger, StaggerItem } from "@/components/motion";
 
+const GOOGLE_FORM_BASE =
+  "https://docs.google.com/forms/d/e/1FAIpQLScxTNw31tZ6b5-Ysrkl_tzZ1TrbcCVhh_hopIUxeNIP1kkwsQ/viewform";
+
+// Maps our field names to the Google Form entry IDs
+const FORM_ENTRIES: Record<string, string> = {
+  name: "entry.450474980",
+  email: "entry.529463571",
+  phone: "entry.2056576431",
+  company: "entry.1765325367",
+  service: "entry.648184500",
+  message: "entry.477995597",
+};
+
 const quoteSchema = z.object({
   name: z.string().min(2, "Please enter your name"),
   email: z.string().email("Please enter a valid email"),
@@ -47,7 +60,12 @@ export default function ContactPage() {
     defaultValues: { service: "" },
   });
 
-  async function onSubmit(data: QuoteForm) {
+  function serviceLabel(slug: string) {
+    const svc = SERVICES.find((s) => s.slug === slug);
+    return svc ? svc.title : slug === "other" ? "Other / Not sure" : slug;
+  }
+
+  function onSubmit(data: QuoteForm) {
     // honeypot check — silently drop bot submissions
     if (data.website && data.website.length > 0) {
       toast.success("Message sent!");
@@ -56,14 +74,18 @@ export default function ContactPage() {
     }
     setSubmitting(true);
     try {
-      const res = await fetch("/api/quote", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error("Request failed");
-      toast.success("Message sent!", {
-        description: "We'll respond within 24 hours.",
+      // Build the prefilled Google Form URL with the user's values
+      const params = new URLSearchParams({ usp: "pp_url" });
+      params.set(FORM_ENTRIES.name, data.name);
+      params.set(FORM_ENTRIES.email, data.email);
+      params.set(FORM_ENTRIES.phone, data.phone || "");
+      params.set(FORM_ENTRIES.company, data.company || "");
+      params.set(FORM_ENTRIES.service, serviceLabel(data.service));
+      params.set(FORM_ENTRIES.message, data.message);
+      const url = `${GOOGLE_FORM_BASE}?${params.toString()}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+      toast.success("Almost done!", {
+        description: "Your details are pre-filled — just hit submit on the form that opened.",
       });
       reset({ name: "", email: "", phone: "", company: "", service: "", message: "", website: "" });
     } catch {
@@ -196,7 +218,7 @@ export default function ContactPage() {
                   <Textarea
                     id="message"
                     rows={5}
-                    placeholder="Tell us about your project — building type, size, timeline, and what you need…"
+                    placeholder="Where are you, what's the issue — flat tire, dead battery, need a tow…?"
                     {...register("message")}
                     aria-invalid={!!errors.message}
                   />
@@ -210,11 +232,11 @@ export default function ContactPage() {
               >
                 {submitting ? (
                   <>
-                    <Loader2 className="h-4 w-4 animate-spin" /> Sending…
+                    <Loader2 className="h-4 w-4 animate-spin" /> Opening form…
                   </>
                 ) : (
                   <>
-                    <Send className="h-4 w-4" /> Send message
+                    <Send className="h-4 w-4" /> Continue to form
                   </>
                 )}
               </Button>

@@ -241,7 +241,7 @@ export const COMPANY = {
   tagline: "Roadside Assistance · Tires · Towing",
   description:
     "24/7 roadside assistance, mobile tire service, battery, lockout, fuel and towing — fast, friendly help wherever you're stranded.",
-  email: "help@riverdaletires.com",
+  email: "help@riverdaletireandauto.com",
   phone: "+1 (555) 867-5309",
   address: "412 Oak Street, Riverdale",
   hours: "24/7 · 365 days a year",
