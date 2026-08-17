@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     template: "%s | Riverdale Tires and Auto — Memphis, TN",
   },
   description:
-    "Tire repair, replacement & 24/7 roadside assistance in Memphis, TN. Jump starts, lockouts, fuel delivery & towing across the tri-state area. Call +1 901-751-2744.",
+    "Tire repair, replacement & 24/7 roadside assistance in Memphis, TN. Jump starts, lockouts, fuel delivery & towing across the tri-state area. Call +1 (901) 426-4572.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Riverdale Tires and Auto | Tire Shop & 24/7 Roadside Assistance in Memphis, TN",
     description:
-      "Tires, battery, lockout, fuel and towing — 24/7 roadside help from Memphis's most trusted auto team. Call +1 901-751-2744.",
+      "Tires, battery, lockout, fuel and towing — 24/7 roadside help from Memphis's most trusted auto team. Call +1 (901) 426-4572.",
     type: "website",
     url: "https://riverdaletireandauto.com",
     siteName: "Riverdale Tires and Auto",

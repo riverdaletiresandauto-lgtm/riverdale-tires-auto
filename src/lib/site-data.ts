@@ -236,7 +236,7 @@ export const COMPANY = {
   description:
     "24/7 roadside assistance, mobile tire service, battery, lockout, fuel and towing — fast, friendly help wherever you're stranded.",
   email: "help@riverdaletireandauto.com",
-  phone: "+1 901-751-2744",
+  phone: "+1 (901) 426-4572",
   address: "5180 Riverdale Rd, Memphis, TN 38141",
   hours: "Mon–Sat 8:00–6:00 · Sun 10:00–4:00",
 };

@@ -10,7 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export const metadata: Metadata = {
   title: "Tire Shop & 24/7 Roadside Assistance in Memphis, TN",
   description:
-    "Riverdale Tires and Auto — Memphis tire shop for tire repair, new & used tires, and 24/7 roadside assistance: jump start, lockout, fuel delivery & towing. 4.5★ rated. Call +1 901-751-2744.",
+    "Riverdale Tires and Auto — Memphis tire shop for tire repair, new & used tires, and 24/7 roadside assistance: jump start, lockout, fuel delivery & towing. 4.5★ rated. Call +1 (901) 426-4572.",
   alternates: { canonical: "/" },
 };
 
@@ -44,7 +44,7 @@ export default function HomePage() {
     image: "https://riverdaletireandauto.com/images/hero.jpg",
     logo: "https://riverdaletireandauto.com/images/logo.png",
     email: COMPANY.email,
-    telephone: "+1 901-751-2744",
+    telephone: "+1 (901) 426-4572",
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",

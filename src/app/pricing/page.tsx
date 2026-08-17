@@ -7,7 +7,7 @@ import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motio
 export const metadata: Metadata = {
   title: "Tire & Roadside Assistance Prices — Memphis, TN",
   description:
-    "Honest, upfront pricing for tire repair, jump starts, lockouts, fuel delivery and towing in Memphis. From $45 — quoted before we roll a truck. Call +1 901-751-2744.",
+    "Honest, upfront pricing for tire repair, jump starts, lockouts, fuel delivery and towing in Memphis. From $45 — quoted before we roll a truck. Call +1 (901) 426-4572.",
   alternates: { canonical: "/pricing" },
 };
 
