@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   },
   description:
     "Tire repair, replacement & 24/7 roadside assistance in Memphis, TN. Jump starts, lockouts, fuel delivery & towing across the tri-state area. Call +1 (901) 426-4572.",
+  other: {
+    "google-site-verification": "scDVorhj86d1nN7cJv51xAAlS2RdzHUkk50QOIDvLLM",
+  },
   alternates: { canonical: "/" },
   openGraph: {
     title: "Riverdale Tires and Auto | Tire Shop & 24/7 Roadside Assistance in Memphis, TN",
