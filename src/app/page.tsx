@@ -8,9 +8,9 @@ import { EmblaCarousel } from "@/components/embla-carousel";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "Tire Shop & 24/7 Roadside Assistance in Memphis, TN",
+  title: "24/7 Roadside Assistance in Memphis, TN | Tires, Towing & Jump Starts",
   description:
-    "Riverdale Tires and Auto — Memphis tire shop for tire repair, new & used tires, and 24/7 roadside assistance: jump start, lockout, fuel delivery & towing. 4.5★ rated. Call +1 (901) 426-4572.",
+    "Riverdale Tires and Auto — 24/7 roadside assistance in Memphis: mobile tire repair, jump starts, lockouts, fuel delivery & towing. Open around the clock. Call +1 (901) 426-4572.",
   alternates: { canonical: "/" },
 };
 
@@ -39,7 +39,7 @@ export default function HomePage() {
     "@id": "https://riverdaletireandauto.com/#business",
     name: "Riverdale Tires and Auto",
     description:
-      "Tire repair, new & used tires, and 24/7 roadside assistance in Memphis — jump starts, lockouts, fuel delivery and towing across the tri-state area.",
+      "24/7 roadside assistance in Memphis — mobile tire repair, jump starts, lockouts, fuel delivery and towing across the tri-state area.",
     url: "https://riverdaletireandauto.com",
     image: "https://riverdaletireandauto.com/images/hero.jpg",
     logo: "https://riverdaletireandauto.com/images/logo.png",
@@ -63,8 +63,7 @@ export default function HomePage() {
       { "@type": "State", name: "East Arkansas" },
     ],
     openingHoursSpecification: [
-      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "08:00", closes: "18:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "16:00" },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "00:00", closes: "23:59" },
     ],
     aggregateRating: { "@type": "AggregateRating", ratingValue: "4.5", reviewCount: "239" },
     knowsAbout: ["Tire Repair", "Used Tires", "New Tires", "Roadside Assistance", "Jump Start", "Towing", "Lockout Service", "Fuel Delivery"],

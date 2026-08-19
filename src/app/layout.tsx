@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://riverdaletireandauto.com"),
   title: {
-    default: "Riverdale Tires and Auto | Tire Shop & 24/7 Roadside Assistance in Memphis, TN",
+    default: "Riverdale Tires and Auto | 24/7 Roadside Assistance in Memphis, TN",
     template: "%s | Riverdale Tires and Auto — Memphis, TN",
   },
   description:
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Riverdale Tires and Auto | Tire Shop & 24/7 Roadside Assistance in Memphis, TN",
+    title: "Riverdale Tires and Auto | 24/7 Roadside Assistance in Memphis, TN",
     description:
       "Tires, battery, lockout, fuel and towing — 24/7 roadside help from Memphis's most trusted auto team. Call +1 (901) 426-4572.",
     type: "website",

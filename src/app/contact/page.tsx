@@ -127,7 +127,7 @@ export default function ContactPage() {
             {[
               { icon: Mail, title: "Email us", value: COMPANY.email, href: `mailto:${COMPANY.email}` },
               { icon: Phone, title: "Call us", value: COMPANY.phone, href: `tel:${COMPANY.phone.replace(/[^+\d]/g, "")}` },
-              { icon: MapPin, title: "Visit us", value: COMPANY.address },
+              { icon: MapPin, title: "Service area", value: "Memphis & the tri-state area — we come to you" },
               { icon: Clock, title: "Working hours", value: COMPANY.hours },
             ].map((c) => (
               <StaggerItem key={c.title}>

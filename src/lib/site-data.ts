@@ -95,23 +95,6 @@ export const SERVICES: Service[] = [
     deliverables: ["Fuel delivery", "Emergency start assist", "Receipt for reimbursement", "Quick dispatch"],
     image: "/images/service-fuel.jpg",
   },
-  {
-    slug: "auto-repair-maintenance",
-    title: "Auto Repair & Maintenance",
-    icon: "Wrench",
-    tagline: "From brakes to oil changes — shop quality, mobile convenience.",
-    description:
-      "Our shop and mobile units handle brakes, batteries, belts, fluids and more — routine maintenance and repairs that keep your vehicle dependable year-round.",
-    features: [
-      "Brake pads & rotors",
-      "Oil changes & fluid service",
-      "Battery & charging systems",
-      "Belts, hoses & filters",
-      "Pre-trip inspections",
-    ],
-    deliverables: ["Shop or mobile service", "Maintenance schedules", "Quality parts warranty", "Digital service records"],
-    image: "/images/gallery-battery.jpg",
-  },
 ];
 
 export type Testimonial = {
@@ -141,13 +124,13 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
   },
   {
-    quote: "Came in for 2 tires to be put on — in and out with no hassle, fair price.",
+    quote: "Called at 2am with a flat on the interstate — they had me rolling within 45 minutes. Lifesavers.",
     name: "Verified customer",
     role: "Memphis, TN",
-    rating: 4,
+    rating: 5,
   },
   {
-    quote: "Real shop, real service. They treat you right and the work holds up.",
+    quote: "Real service, real people. They treat you right and the work holds up.",
     name: "Verified customer",
     role: "Memphis, TN",
     rating: 4,
@@ -164,7 +147,7 @@ export const TEAM = [
   {
     name: "Marcus Rivera",
     title: "Founder & Lead Technician",
-    bio: "20 years in tires and roadside recovery — built Riverdale Tires on the promise of fast, honest help.",
+    bio: "20 years in tires and roadside recovery — built Riverdale on the promise of fast, honest help, day or night.",
     image: "/images/team-1.jpg",
   },
   {
@@ -188,7 +171,7 @@ export const TEAM = [
 ];
 
 export const TIMELINE = [
-  { year: "2008", title: "Founded", text: "Marcus Rivera started Riverdale Tires as a single-shop tire business." },
+  { year: "2008", title: "Founded", text: "Marcus Rivera started Riverdale Tires as a mobile tire and roadside service." },
   { year: "2012", title: "Roadside launched", text: "Added 24/7 mobile tire and jump-start service across the county." },
   { year: "2016", title: "Towing fleet", text: "Brought flatbed towing and accident recovery in-house." },
   { year: "2020", title: "Expanded coverage", text: "Full roadside coverage — tires, battery, lockout, fuel and towing." },
@@ -200,7 +183,7 @@ export const STATS = [
   { value: "4.5★", label: "Chamber rating" },
   { value: "239", label: "Verified reviews" },
   { value: "15+", label: "Years in business" },
-  { value: "6 days", label: "Open weekly" },
+  { value: "24/7", label: "Always open" },
 ];
 
 export const FAQS = [
@@ -232,11 +215,11 @@ export const FAQS = [
 
 export const COMPANY = {
   name: "Riverdale Tires and Auto",
-  tagline: "Roadside Assistance · Tires · Towing",
+  tagline: "24/7 Roadside Assistance · Tires · Towing",
   description:
-    "24/7 roadside assistance, mobile tire service, battery, lockout, fuel and towing — fast, friendly help wherever you're stranded.",
+    "24/7 roadside assistance, mobile tire service, battery, lockout, fuel and towing — fast, friendly help wherever you're stranded, any time of day.",
   email: "help@riverdaletireandauto.com",
   phone: "+1 (901) 426-4572",
   address: "5180 Riverdale Rd, Memphis, TN 38141",
-  hours: "Mon–Sat 8:00–6:00 · Sun 10:00–4:00",
+  hours: "Open 24/7 · 365 days a year",
 };

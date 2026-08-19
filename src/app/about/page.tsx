@@ -5,9 +5,9 @@ import { TEAM, TIMELINE } from "@/lib/site-data";
 import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motion";
 
 export const metadata: Metadata = {
-  title: "About Our Memphis Tire Shop & Roadside Team",
+  title: "About Our 24/7 Roadside Assistance Team in Memphis",
   description:
-    "Riverdale Tires and Auto in Memphis, TN — 15+ years of tire service, auto repair and roadside assistance. Meet the team behind 239 five-star reviews.",
+    "Riverdale Tires and Auto in Memphis, TN — 15+ years of 24/7 roadside assistance, mobile tire service and towing. Meet the team behind 239 five-star reviews.",
   alternates: { canonical: "/about" },
 };
 
@@ -51,7 +51,7 @@ export default function AboutPage() {
             </FadeUp>
             <FadeUp delay={0.16}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Riverdale Tires and Auto started in 2008 as a single tire shop with a pickup truck
+                Riverdale Tires and Auto started in 2008 with a pickup truck
                 and a promise: when someone is stranded, we show up.
               </p>
             </FadeUp>
@@ -66,8 +66,8 @@ export default function AboutPage() {
           <FadeUp delay={0.2}>
             <div className="relative overflow-hidden rounded-3xl border border-white/70 shadow-[0_24px_80px_rgba(30,58,95,0.18)]">
               <Image
-                src="/images/gallery-shop.jpg"
-                alt="Riverdale Tires and Auto service shop"
+                src="/images/service-towing.jpg"
+                alt="Riverdale Tires and Auto roadside assistance vehicle"
                 width={1200}
                 height={675}
                 className="h-[24rem] w-full object-cover"

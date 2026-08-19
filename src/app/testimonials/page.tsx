@@ -6,7 +6,7 @@ import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motio
 import { StarRating } from "@/components/star-rating";
 
 export const metadata: Metadata = {
-  title: "Customer Reviews — Memphis Tire Shop & Roadside Service",
+  title: "Customer Reviews — 24/7 Roadside Assistance in Memphis",
   description:
     "Read reviews of Riverdale Tires and Auto in Memphis, TN — 4.5★ rated by 239 customers for tires, auto repair and 24/7 roadside assistance.",
   alternates: { canonical: "/testimonials" },
