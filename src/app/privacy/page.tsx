@@ -3,7 +3,10 @@ import { COMPANY } from "@/lib/site-data";
 import { FadeUp } from "@/components/motion";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy | Riverdale Tires and Auto — Memphis",
+  description:
+    "How Riverdale Tires and Auto collects, uses and protects your information when you use our 24/7 roadside assistance services in Memphis, TN.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
@@ -20,24 +23,25 @@ export default function PrivacyPage() {
             <div>
               <h2 className="text-lg font-bold text-primary">Information we collect</h2>
               <p className="mt-2">
-                When you use our contact or quote form, we collect your name, email address, phone
-                number, company name and the details of your enquiry. We only use this information
-                to respond to your request.
+                When you use our contact or request-help form, we collect your name, email address,
+                phone number, vehicle details and the nature of your roadside emergency. We only use
+                this information to respond to your request and dispatch help.
               </p>
             </div>
             <div>
               <h2 className="text-lg font-bold text-primary">How we use your information</h2>
               <p className="mt-2">
-                Your details are used solely to answer your enquiry, prepare quotes, and provide the
-                services you request. We never sell or share your personal information with third
-                parties for marketing purposes.
+                Your details are used solely to answer your request, arrange roadside assistance,
+                and provide the services you need. We never sell or share your personal information
+                with third parties for marketing purposes.
               </p>
             </div>
             <div>
               <h2 className="text-lg font-bold text-primary">Data retention</h2>
               <p className="mt-2">
-                We retain enquiry records for as long as needed to provide our services and meet
-                legal obligations. You may request deletion of your data at any time by emailing{" "}
+                We retain service and enquiry records for as long as needed to provide our services
+                and meet legal obligations. You may request deletion of your data at any time by
+                emailing{" "}
                 <a href={`mailto:${COMPANY.email}`} className="text-primary underline-offset-2 hover:underline">{COMPANY.email}</a>.
               </p>
             </div>

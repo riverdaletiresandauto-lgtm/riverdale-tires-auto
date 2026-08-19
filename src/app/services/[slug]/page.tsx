@@ -45,11 +45,25 @@ export default async function ServicePage({ params }: PageProps) {
     availableChannel: { "@type": "ServiceChannel", serviceUrl: `https://riverdaletireandauto.com/services/${service.slug}`, servicePhone: "+1 (901) 426-4572" },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://riverdaletireandauto.com" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://riverdaletireandauto.com/services" },
+      { "@type": "ListItem", position: 3, name: service.title, item: `https://riverdaletireandauto.com/services/${service.slug}` },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <section className="relative overflow-hidden pt-28 pb-12">
         <div className="blob right-[-10%] top-[-5%] h-[30rem] w-[30rem] bg-accent/15" />

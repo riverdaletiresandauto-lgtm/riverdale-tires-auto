@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { X, Megaphone } from "lucide-react";
 
-export function AlertBanner({ message = "24/7 emergency HVAC service — call our hotline anytime." }: { message?: string }) {
+export function AlertBanner({ message = "24/7 roadside assistance across Memphis & the tri-state area — call our hotline anytime." }: { message?: string }) {
   const [visible, setVisible] = useState(true);
   if (!visible) return null;
   return (

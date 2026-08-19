@@ -8,20 +8,48 @@ import { StarRating } from "@/components/star-rating";
 export const metadata: Metadata = {
   title: "Customer Reviews — 24/7 Roadside Assistance in Memphis",
   description:
-    "Read reviews of Riverdale Tires and Auto in Memphis, TN — 4.5★ rated by 239 customers for tires, auto repair and 24/7 roadside assistance.",
+    "Read reviews of Riverdale Tires and Auto in Memphis, TN — 4.5★ rated by 239 customers for tires and 24/7 roadside assistance.",
   alternates: { canonical: "/testimonials" },
+};
+
+const reviewsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Riverdale Tires and Auto",
+  image: "https://riverdaletireandauto.com/images/logo.png",
+  telephone: "+1 (901) 426-4572",
+  url: "https://riverdaletireandauto.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "5180 Riverdale Rd",
+    addressLocality: "Memphis",
+    addressRegion: "TN",
+    postalCode: "38141",
+    addressCountry: "US",
+  },
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.5", reviewCount: "239", bestRating: "5" },
+  review: TESTIMONIALS.slice(0, 3).map((t) => ({
+    "@type": "Review",
+    reviewRating: { "@type": "Rating", ratingValue: t.rating, bestRating: "5" },
+    author: { "@type": "Person", name: t.name },
+    reviewBody: t.quote,
+  })),
 };
 
 export default function TestimonialsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
+      />
       <section className="relative overflow-hidden pt-28 pb-12">
         <div className="blob left-[-8%] top-[-10%] h-[28rem] w-[28rem] bg-accent/15" />
         <div className="container-site relative">
           <SectionHeading
             eyebrow="Testimonials"
-            title="What our clients say"
-            subtitle="HVAC facility managers, architects and manufacturing partners — in their own words."
+            title="What stranded drivers say"
+            subtitle="Real words from drivers we've helped — in their own reviews."
           />
         </div>
       </section>

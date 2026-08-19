@@ -11,6 +11,21 @@ export const metadata: Metadata = {
   alternates: { canonical: "/pricing" },
 };
 
+const offersJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  name: "Riverdale Tires and Auto — 24/7 Roadside Assistance Pricing",
+  url: "https://riverdaletireandauto.com/pricing",
+  provider: { "@type": "AutoRepair", name: "Riverdale Tires and Auto", telephone: "+1 (901) 426-4572" },
+  itemListElement: [
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flat Tire Repair" }, priceSpecification: { "@type": "PriceSpecification", price: "45", priceCurrency: "USD", minPrice: "45", description: "per call + tire" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Jump Start & Battery Service" }, priceSpecification: { "@type": "PriceSpecification", price: "45", priceCurrency: "USD", minPrice: "45", description: "per call" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Lockout Assistance" }, priceSpecification: { "@type": "PriceSpecification", price: "45", priceCurrency: "USD", minPrice: "45", description: "per call" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Towing & Recovery" }, priceSpecification: { "@type": "PriceSpecification", price: "89", priceCurrency: "USD", minPrice: "89", description: "per tow within Memphis" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fuel Delivery" }, priceSpecification: { "@type": "PriceSpecification", price: "45", priceCurrency: "USD", minPrice: "45", description: "per call + fuel" } },
+  ],
+};
+
 const PLANS = [
   {
     name: "Tire Service",
@@ -65,6 +80,10 @@ const PLANS = [
 export default function PricingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offersJsonLd) }}
+      />
       <section className="relative overflow-hidden pt-28 pb-12">
         <div className="blob left-[-8%] top-[-10%] h-[28rem] w-[28rem] bg-accent/15" />
         <div className="container-site relative">

@@ -34,9 +34,38 @@ const WHY = [
   },
 ];
 
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://riverdaletireandauto.com/#org",
+  name: "Riverdale Tires and Auto",
+  url: "https://riverdaletireandauto.com",
+  logo: "https://riverdaletireandauto.com/images/logo.png",
+  telephone: "+1 (901) 426-4572",
+  email: "help@riverdaletireandauto.com",
+  foundingDate: "2008",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "5180 Riverdale Rd",
+    addressLocality: "Memphis",
+    addressRegion: "TN",
+    postalCode: "38141",
+    addressCountry: "US",
+  },
+  areaServed: ["Memphis", "West Tennessee", "North Mississippi", "East Arkansas"],
+  sameAs: [
+    "https://www.facebook.com/Riverdaletireautotn/",
+    "https://www.instagram.com/explore/locations/163643453825918/riverdale-tire-and-auto",
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
       <section className="relative overflow-hidden pt-28 pb-12">
         <div className="blob left-[-8%] top-[-5%] h-[30rem] w-[30rem] bg-accent/15" />
         <div className="container-site relative grid items-center gap-12 lg:grid-cols-2">

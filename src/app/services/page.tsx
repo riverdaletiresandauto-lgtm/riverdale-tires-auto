@@ -8,20 +8,36 @@ import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motio
 export const metadata: Metadata = {
   title: "Tire Repair, Jump Start, Towing & More — Memphis Roadside Services",
   description:
-    "24/7 roadside assistance in Memphis, TN: tire repair & replacement, jump start & battery, lockout help, towing, fuel delivery and auto repair from Riverdale Tires and Auto.",
+    "24/7 roadside assistance in Memphis, TN: tire repair & replacement, jump start & battery, lockout help, towing and fuel delivery from Riverdale Tires and Auto.",
   alternates: { canonical: "/services" },
+};
+
+const servicesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Riverdale Tires and Auto — 24/7 Roadside Services",
+  itemListElement: SERVICES.map((s, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: s.title,
+    url: `https://riverdaletireandauto.com/services/${s.slug}`,
+  })),
 };
 
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
       <section className="relative overflow-hidden pt-28 pb-12">
         <div className="blob left-[-8%] top-[-10%] h-[28rem] w-[28rem] bg-accent/15" />
         <div className="container-site relative text-center">
           <SectionHeading
             eyebrow="Services"
             title="Help for every roadside emergency"
-            subtitle="Six services, one phone number, 24/7 dispatch across Riverdale."
+            subtitle="Five services, one phone number, 24/7 dispatch across the tri-state area."
           />
         </div>
       </section>

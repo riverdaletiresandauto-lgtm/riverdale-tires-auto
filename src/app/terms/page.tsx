@@ -3,7 +3,10 @@ import { COMPANY } from "@/lib/site-data";
 import { FadeUp } from "@/components/motion";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
+  title: "Terms of Service | Riverdale Tires and Auto — Memphis",
+  description:
+    "Terms of service for Riverdale Tires and Auto's 24/7 roadside assistance, mobile tire service and towing across Memphis and the tri-state area.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {
@@ -20,30 +23,29 @@ export default function TermsPage() {
             <div>
               <h2 className="text-lg font-bold text-primary">Agreement</h2>
               <p className="mt-2">
-                By engaging {COMPANY.name} for design, engineering, manufacturing or service work,
-                you agree to the terms outlined here and in your individual project contract.
+                By engaging {COMPANY.name} for roadside assistance, towing, mobile tire or vehicle
+                service work, you agree to the terms outlined here.
               </p>
             </div>
             <div>
-              <h2 className="text-lg font-bold text-primary">Quotes & proposals</h2>
+              <h2 className="text-lg font-bold text-primary">Service quotes</h2>
               <p className="mt-2">
-                All quotes are valid for 30 days unless stated otherwise. Final scope, deliverables
-                and timelines are confirmed in a written proposal before work begins.
+                Quotes are provided before service begins — no surprises, no hidden fees. Final
+                charges are confirmed by phone before a truck is dispatched.
               </p>
             </div>
             <div>
-              <h2 className="text-lg font-bold text-primary">Intellectual property</h2>
+              <h2 className="text-lg font-bold text-primary">Payment</h2>
               <p className="mt-2">
-                Deliverables (models, drawings, reports) remain the property of the client upon full
-                payment. Our standard tools, methods and internal processes remain the property of
-                {COMPANY.name}.
+                We accept card, cash and invoice for fleet accounts. Receipts are provided for
+                insurance or roadside membership reimbursement.
               </p>
             </div>
             <div>
-              <h2 className="text-lg font-bold text-primary">Warranty & liability</h2>
+              <h2 className="text-lg font-bold text-primary">Liability</h2>
               <p className="mt-2">
-                Our work is performed in accordance with applicable codes and professional
-                standards. Liability is limited to the fees paid for the specific service provided.
+                Our work is performed by trained technicians with professional equipment. Liability
+                is limited to the fees paid for the specific service provided.
               </p>
             </div>
             <div>
