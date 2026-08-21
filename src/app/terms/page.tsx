@@ -3,9 +3,9 @@ import { COMPANY } from "@/lib/site-data";
 import { FadeUp } from "@/components/motion";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Riverdale Tires and Auto — Memphis",
+  title: "Terms of Service | Riverdale Tire & Auto — Memphis",
   description:
-    "Terms of service for Riverdale Tires and Auto's 24/7 roadside assistance, mobile tire service and towing across Memphis and the tri-state area.",
+    "Terms of service for Riverdale Tire & Auto's 24/7 roadside assistance, mobile tire service and towing across Memphis and the tri-state area.",
   alternates: { canonical: "/terms" },
 };
 

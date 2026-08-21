@@ -8,14 +8,14 @@ import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motio
 export const metadata: Metadata = {
   title: "Tire Repair, Jump Start, Towing & More — Memphis Roadside Services",
   description:
-    "24/7 roadside assistance in Memphis, TN: tire repair & replacement, jump start & battery, lockout help, towing and fuel delivery from Riverdale Tires and Auto.",
+    "24/7 roadside assistance in Memphis, TN: tire repair & replacement, jump start & battery, lockout help, towing and fuel delivery from Riverdale Tire & Auto.",
   alternates: { canonical: "/services" },
 };
 
 const servicesJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Riverdale Tires and Auto — 24/7 Roadside Services",
+  name: "Riverdale Tire & Auto — 24/7 Roadside Services",
   itemListElement: SERVICES.map((s, i) => ({
     "@type": "ListItem",
     position: i + 1,

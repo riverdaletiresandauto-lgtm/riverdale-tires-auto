@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, PhoneCall } from "lucide-react";
+import { COMPANY } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
@@ -46,10 +47,10 @@ export function Navbar() {
       >
         <Link href="/" className="flex items-center gap-2.5">
           <span className="relative h-10 w-10 overflow-hidden rounded-xl shadow-md shadow-primary/20">
-            <Image src="/images/logo.png" alt="Riverdale Tires and Auto logo" fill className="object-cover" sizes="40px" />
+            <Image src="/images/logo.png" alt="Riverdale Tire & Auto logo" fill className="object-cover" sizes="40px" />
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="text-base font-extrabold tracking-tight text-primary">Riverdale Tires &amp; Auto</span>
+            <span className="text-base font-extrabold tracking-tight text-primary">Riverdale Tire &amp; Auto</span>
             <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">
               Roadside · Tires · Towing
             </span>
@@ -74,7 +75,15 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-3 md:flex">
+          <a
+            href={`tel:${COMPANY.phone.replace(/[^+\d]/g, "")}`}
+            className="flex items-center gap-2 rounded-xl border border-primary/15 bg-white/50 px-4 py-2.5 text-sm font-bold text-primary transition-all hover:border-accent/50 hover:bg-white/80"
+          >
+            <PhoneCall className="h-4 w-4 text-accent" />
+            <span className="hidden lg:inline">{COMPANY.phone}</span>
+            <span className="lg:hidden">Call now</span>
+          </a>
           <Link href="/contact" className="btn-gradient !px-5 !py-2.5">
             Get a Quote
           </Link>
@@ -114,7 +123,13 @@ export function Navbar() {
                 </Link>
               </li>
             ))}
-            <li className="mt-2">
+            <li className="mt-2 grid gap-2">
+              <a
+                href={`tel:${COMPANY.phone.replace(/[^+\d]/g, "")}`}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-primary/15 bg-white/60 px-4 py-3 text-base font-bold text-primary"
+              >
+                <PhoneCall className="h-5 w-5 text-accent" /> {COMPANY.phone}
+              </a>
               <Link href="/contact" className="btn-gradient w-full">
                 Get a Quote
               </Link>

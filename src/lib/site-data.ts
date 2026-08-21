@@ -7,6 +7,7 @@ export type Service = {
   features: string[];
   deliverables: string[];
   image: string;
+  faqs: { q: string; a: string }[];
 };
 
 export const SERVICES: Service[] = [
@@ -25,6 +26,12 @@ export const SERVICES: Service[] = [
       "All sizes: cars, SUVs, trucks",
     ],
     deliverables: ["Roadside repair", "Tire matching & fitment", "TPMS service", "24/7 dispatch"],
+    faqs: [
+    { q: 'Can you fix a flat tire on the spot?', a: "Yes — our trucks carry the tools and common tire sizes, and most tread punctures are patched on-site in 30–45 minutes. If we don't have your size on board, we match and deliver it to you." },
+    { q: 'How much does mobile tire repair cost?', a: 'Flat tire repair starts at $45 plus the tire if replacement is needed. You get the full price before we start — no surprise fees.' },
+    { q: 'Will a patched tire last as long as a new one?', a: "A proper tread-area patch (plug-combined, not just a plug) can last the remaining life of the tire when installed by a trained tech. Sidewall damage and run-flat damage can't be safely repaired." },
+  ],
+
     image: "/images/service-tire.jpg",
   },
   {
@@ -42,6 +49,12 @@ export const SERVICES: Service[] = [
       "Charging system check",
     ],
     deliverables: ["Jump start", "Battery test report", "New battery install", "Alternator check"],
+    faqs: [
+    { q: 'Do you replace car batteries on-site?', a: 'Yes — we carry batteries for most makes and models, test the old one, install the new one on the spot and recycle the old battery for you.' },
+    { q: 'How do I know if I need a jump start or a new battery?', a: "If the car cranks slowly or clicks, it's likely a battery or connection issue. Our techs test the battery and charging system on-site so you know exactly what you need — no guessing." },
+    { q: 'Will a jump start fix my car permanently?', a: "A jump start gets you running, but if the battery won't hold a charge or the alternator isn't charging, it'll die again. We test both so you're not stranded twice." },
+  ],
+
     image: "/images/service-jumpstart.jpg",
   },
   {
@@ -59,6 +72,12 @@ export const SERVICES: Service[] = [
       "Pet-in-car priority response",
     ],
     deliverables: ["Vehicle entry", "Key extraction", "Lock repair referral", "24/7 availability"],
+    faqs: [
+    { q: 'Can you unlock my car without damaging it?', a: 'In nearly all cases, yes. Our techs use professional air wedges and long-reach tools for damage-free entry. If your vehicle needs special handling, we tell you upfront.' },
+    { q: 'How long does a lockout take?', a: 'Most vehicles are opened in 15–30 minutes after arrival. In Memphis, average arrival is 30–45 minutes — 24/7.' },
+    { q: 'Do you need proof of ownership?', a: 'Yes — for your safety, we verify you own or are authorized for the vehicle before opening it. Have ID and ideally the registration or title ready.' },
+  ],
+
     image: "/images/service-lockout.jpg",
   },
   {
@@ -76,6 +95,12 @@ export const SERVICES: Service[] = [
       "Winch-out & stuck vehicles",
     ],
     deliverables: ["Safe transport", "Accident scene support", "Long-haul quotes", "Insurance coordination"],
+    faqs: [
+    { q: 'Do you use flatbed or wheel-lift tow trucks?', a: "Both — and we'll tell you which your vehicle needs. AWD and 4WD vehicles must go on a flatbed to protect the drivetrain; wheel-lift is fine for many 2WD cars." },
+    { q: 'How much does a tow cost in Memphis?', a: 'Local tows start at $95 including hook-up and the first miles. You get the exact quote on the phone before we dispatch — no surprises on arrival.' },
+    { q: 'Can you tow at night or in bad weather?', a: "Yes — we're open 24/7 including holidays and severe weather. Our flatbeds are equipped for night and highway recovery." },
+  ],
+
     image: "/images/service-towing.jpg",
   },
   {
@@ -93,6 +118,12 @@ export const SERVICES: Service[] = [
       "24/7 roadside response",
     ],
     deliverables: ["Fuel delivery", "Emergency start assist", "Receipt for reimbursement", "Quick dispatch"],
+    faqs: [
+    { q: 'How much fuel do you bring?', a: 'We carry emergency fuel in safe containers — enough to get you to the nearest station. You pay for the fuel plus a delivery fee starting at $55.' },
+    { q: 'Can you deliver diesel too?', a: 'Yes — we carry both petrol and diesel. Tell dispatch what you drive so we bring the right fuel.' },
+    { q: "I'm out of gas on the highway — is it safe to wait?", a: "Pull fully onto the shoulder, turn on hazards and stay in the car with doors locked. Never walk on an interstate. We'll get to you with fuel — usually in 30–45 minutes." },
+  ],
+
     image: "/images/service-fuel.jpg",
   },
 ];
@@ -214,7 +245,7 @@ export const FAQS = [
 ];
 
 export const COMPANY = {
-  name: "Riverdale Tires and Auto",
+  name: "Riverdale Tire & Auto",
   tagline: "24/7 Roadside Assistance · Tires · Towing",
   description:
     "24/7 roadside assistance, mobile tire service, battery, lockout, fuel and towing — fast, friendly help wherever you're stranded, any time of day.",

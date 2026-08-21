@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
-import { Mail, Phone, MapPin, Clock, Send, Loader2, Zap, CheckCircle2 } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, Loader2, Zap, CheckCircle2, Navigation } from "lucide-react";
 import { COMPANY, SERVICES } from "@/lib/site-data";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -159,12 +159,24 @@ export function ContactClient() {
             <StaggerItem>
               <div className="overflow-hidden rounded-3xl border border-white/60 shadow-[0_8px_32px_rgba(30,58,95,0.08)]">
                 <iframe
-                  title="Riverdale Tires and Auto service area"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=-89.85%2C35.03%2C-89.81%2C35.06&layer=mapnik&marker=35.0442%2C-89.8307"
+                  title="Riverdale Tire & Auto on Google Maps"
+                  src="https://www.google.com/maps?q=Riverdale%20Tire%20%26%20Auto%2C%205180%20Riverdale%20Rd%2C%20Memphis%2C%20TN%2038141&z=14&output=embed"
                   className="h-64 w-full border-0"
                   loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
+            </StaggerItem>
+            <StaggerItem>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=5180+Riverdale+Rd%2C+Memphis%2C+TN+38141"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-glass w-full justify-center"
+              >
+                Get Directions <Navigation className="h-4 w-4" />
+              </a>
             </StaggerItem>
           </Stagger>
 

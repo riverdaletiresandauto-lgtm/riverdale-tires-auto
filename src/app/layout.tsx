@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { AlertBanner } from "@/components/alert-banner";
+import { MobileCallBar } from "@/components/mobile-call-bar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,8 +21,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://riverdaletireandauto.com"),
   title: {
-    default: "Riverdale Tires and Auto | 24/7 Roadside Assistance in Memphis, TN",
-    template: "%s | Riverdale Tires and Auto — Memphis, TN",
+    default: "Riverdale Tire & Auto | 24/7 Roadside Assistance in Memphis, TN",
+    template: "%s | Riverdale Tire & Auto — Memphis, TN",
   },
   description:
     "Tire repair, replacement & 24/7 roadside assistance in Memphis, TN. Jump starts, lockouts, fuel delivery & towing across the tri-state area. Call +1 (901) 426-4572.",
@@ -29,18 +31,18 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Riverdale Tires and Auto | 24/7 Roadside Assistance in Memphis, TN",
+    title: "Riverdale Tire & Auto | 24/7 Roadside Assistance in Memphis, TN",
     description:
       "Tires, battery, lockout, fuel and towing — 24/7 roadside help from Memphis's most trusted auto team. Call +1 (901) 426-4572.",
     type: "website",
     url: "https://riverdaletireandauto.com",
-    siteName: "Riverdale Tires and Auto",
+    siteName: "Riverdale Tire & Auto",
     locale: "en_US",
-    images: [{ url: "https://riverdaletireandauto.com/images/hero.jpg", width: 1200, height: 675, alt: "Riverdale Tires and Auto roadside assistance in Memphis" }],
+    images: [{ url: "https://riverdaletireandauto.com/images/hero.jpg", width: 1200, height: 675, alt: "Riverdale Tire & Auto roadside assistance in Memphis" }],
   },
   twitter: {
     card: "summary",
-    title: "Riverdale Tires and Auto | 24/7 Roadside Assistance in Memphis, TN",
+    title: "Riverdale Tire & Auto | 24/7 Roadside Assistance in Memphis, TN",
     description:
       "Tires, battery, lockout, fuel and towing — 24/7 roadside help from Memphis's most trusted auto team.",
     images: ["https://riverdaletireandauto.com/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"],
@@ -65,9 +67,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col pt-16">
         <AlertBanner message="24/7 roadside assistance across Memphis & the tri-state area — call our hotline anytime." />
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pb-16 md:pb-0">{children}</main>
         <Footer />
+        <MobileCallBar />
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );

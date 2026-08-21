@@ -7,7 +7,7 @@ import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motio
 export const metadata: Metadata = {
   title: "About Our 24/7 Roadside Assistance Team in Memphis",
   description:
-    "Riverdale Tires and Auto in Memphis, TN — 15+ years of 24/7 roadside assistance, mobile tire service and towing. Meet the team behind 239 five-star reviews.",
+    "Riverdale Tire & Auto in Memphis, TN — 15+ years of 24/7 roadside assistance, mobile tire service and towing. Meet the team behind 239 five-star reviews.",
   alternates: { canonical: "/about" },
 };
 
@@ -38,7 +38,7 @@ const aboutJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://riverdaletireandauto.com/#org",
-  name: "Riverdale Tires and Auto",
+  name: "Riverdale Tire & Auto",
   url: "https://riverdaletireandauto.com",
   logo: "https://riverdaletireandauto.com/images/logo.png",
   telephone: "+1 (901) 426-4572",
@@ -80,7 +80,7 @@ export default function AboutPage() {
             </FadeUp>
             <FadeUp delay={0.16}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Riverdale Tires and Auto started in 2008 with a pickup truck
+                Riverdale Tire & Auto started in 2008 with a pickup truck
                 and a promise: when someone is stranded, we show up.
               </p>
             </FadeUp>
@@ -96,7 +96,7 @@ export default function AboutPage() {
             <div className="relative overflow-hidden rounded-3xl border border-white/70 shadow-[0_24px_80px_rgba(30,58,95,0.18)]">
               <Image
                 src="/images/service-towing.jpg"
-                alt="Riverdale Tires and Auto roadside assistance vehicle"
+                alt="Riverdale Tire & Auto roadside assistance vehicle"
                 width={1200}
                 height={675}
                 className="h-[24rem] w-full object-cover"
@@ -139,7 +139,7 @@ export default function AboutPage() {
               <StaggerItem key={m.name}>
                 <div className="glass-card h-full overflow-hidden text-center">
                   <div className="relative h-56 w-full">
-                    <Image src={m.image} alt={`${m.name} — ${m.title} at Riverdale Tires and Auto`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
+                    <Image src={m.image} alt={`${m.name} — ${m.title} at Riverdale Tire & Auto`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-primary">{m.name}</h3>
@@ -179,6 +179,42 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ============ GALLERY ============ */}
+      <section className="section-pad !pt-8">
+        <div className="container-site">
+          <SectionHeading
+            eyebrow="Inside the shop"
+            title="Real shop, real trucks, real people"
+            subtitle="A look at where your rescue vehicles are serviced and readied — 24/7."
+          />
+          <Stagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { src: "/images/gallery-shop.jpg", alt: "Inside the Riverdale Tire & Auto service shop in Memphis", label: "Our service bays" },
+              { src: "/images/gallery-battery.jpg", alt: "Battery testing and installation at Riverdale Tire & Auto", label: "Battery & electrical work" },
+              { src: "/images/service-towing.jpg", alt: "Riverdale Tire & Auto flatbed tow truck", label: "Flatbed fleet" },
+              { src: "/images/service-tire.jpg", alt: "Mobile tire repair and replacement in Memphis", label: "Mobile tire service" },
+              { src: "/images/hero.jpg", alt: "Roadside assistance helping a stranded driver in Memphis", label: "24/7 roadside response" },
+              { src: "/images/service-jumpstart.jpg", alt: "Jump start service in Memphis, TN", label: "Jump start & battery" },
+            ].map((g) => (
+              <StaggerItem key={g.src}>
+                <figure className="glass-card group relative h-56 overflow-hidden">
+                  <Image
+                    src={g.src}
+                    alt={g.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 pb-3 pt-10 text-sm font-semibold text-white">
+                    {g.label}
+                  </figcaption>
+                </figure>
+              </StaggerItem>
+            ))}
+          </Stagger>
         </div>
       </section>
 

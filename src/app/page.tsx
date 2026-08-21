@@ -4,13 +4,14 @@ import type { Metadata } from "next";
 import { ArrowRight, PhoneCall, ShieldCheck, Clock, MapPin } from "lucide-react";
 import { SERVICES, STATS, TESTIMONIALS, FAQS, COMPANY } from "@/lib/site-data";
 import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motion";
+import { EmergencyRequest } from "@/components/emergency-request";
 import { EmblaCarousel } from "@/components/embla-carousel";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
   title: "24/7 Roadside Assistance in Memphis, TN | Tires, Towing & Jump Starts",
   description:
-    "Riverdale Tires and Auto — 24/7 roadside assistance in Memphis: mobile tire repair, jump starts, lockouts, fuel delivery & towing. Open around the clock. Call +1 (901) 426-4572.",
+    "Riverdale Tire & Auto — 24/7 roadside assistance in Memphis: mobile tire repair, jump starts, lockouts, fuel delivery & towing. Open around the clock. Call +1 (901) 426-4572.",
   alternates: { canonical: "/" },
 };
 
@@ -37,7 +38,7 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     "@id": "https://riverdaletireandauto.com/#business",
-    name: "Riverdale Tires and Auto",
+    name: "Riverdale Tire & Auto",
     description:
       "24/7 roadside assistance in Memphis — mobile tire repair, jump starts, lockouts, fuel delivery and towing across the tri-state area.",
     url: "https://riverdaletireandauto.com",
@@ -115,7 +116,7 @@ export default function HomePage() {
             <FadeUp delay={0.16}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
                 Flat tires, dead batteries, locked keys, empty tanks or a vehicle that won&apos;t
-                start — Riverdale Tires and Auto gets you moving again, wherever you are, any hour.
+                start — Riverdale Tire & Auto gets you moving again, wherever you are, any hour.
               </p>
             </FadeUp>
             <FadeUp delay={0.24}>
@@ -144,7 +145,7 @@ export default function HomePage() {
             <div className="relative overflow-hidden rounded-3xl border border-white/70 shadow-[0_24px_80px_rgba(30,58,95,0.18)]">
               <Image
                 src="/images/hero.jpg"
-                alt="Riverdale Tires and Auto roadside assistance helping a stranded driver"
+                alt="Riverdale Tire & Auto roadside assistance helping a stranded driver"
                 width={1200}
                 height={675}
                 priority
@@ -289,8 +290,27 @@ export default function HomePage() {
                 <h2 className="text-xl font-bold text-primary">Proudly serving Memphis &amp; the tri-state area</h2>
                 <p className="mt-1 text-muted-foreground">
                   All of Memphis, West Tennessee, North Mississippi and East Arkansas — including
-                  interstate corridors and long-distance towing on request.
+                  interstate corridors and long-distance towing on request. Average response
+                  30–45 minutes.
                 </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {[
+                    { label: "Southaven, MS", slug: "southaven-ms" },
+                    { label: "Olive Branch, MS", slug: "olive-branch-ms" },
+                    { label: "Horn Lake, MS", slug: "horn-lake-ms" },
+                    { label: "West Memphis, AR", slug: "west-memphis-ar" },
+                    { label: "Germantown, TN", slug: "germantown-tn" },
+                    { label: "Bartlett, TN", slug: "bartlett-tn" },
+                  ].map((c) => (
+                    <Link
+                      key={c.slug}
+                      href={`/service-areas/${c.slug}`}
+                      className="rounded-full border border-primary/15 bg-white/50 px-3.5 py-1.5 text-xs font-medium text-muted-foreground transition-all hover:border-accent/40 hover:text-primary"
+                    >
+                      {c.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
               <Link href="/contact" className="btn-gradient shrink-0">
                 Check coverage <ArrowRight className="h-4 w-4" />
@@ -354,6 +374,7 @@ export default function HomePage() {
                   Request help online
                 </Link>
               </div>
+              <EmergencyRequest />
             </div>
           </FadeUp>
         </div>

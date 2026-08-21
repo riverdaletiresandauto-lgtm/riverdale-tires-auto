@@ -3,9 +3,9 @@ import { COMPANY } from "@/lib/site-data";
 import { FadeUp } from "@/components/motion";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Riverdale Tires and Auto — Memphis",
+  title: "Privacy Policy | Riverdale Tire & Auto — Memphis",
   description:
-    "How Riverdale Tires and Auto collects, uses and protects your information when you use our 24/7 roadside assistance services in Memphis, TN.",
+    "How Riverdale Tire & Auto collects, uses and protects your information when you use our 24/7 roadside assistance services in Memphis, TN.",
   alternates: { canonical: "/privacy" },
 };
 

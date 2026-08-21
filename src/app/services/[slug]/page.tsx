@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { ArrowRight, Check } from "lucide-react";
 import { SERVICES } from "@/lib/site-data";
 import { FadeUp, Stagger, StaggerItem } from "@/components/motion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!service) return { title: "Service not found" };
   return {
     title: `${service.title} in Memphis, TN — 24/7 Roadside Help`,
-    description: `${service.tagline} Riverdale Tires and Auto in Memphis serves the tri-state area. Call +1 (901) 426-4572.`,
+    description: `${service.tagline} Riverdale Tire & Auto in Memphis serves the tri-state area. Call +1 (901) 426-4572.`,
     alternates: { canonical: `/services/${service.slug}` },
   };
 }
@@ -29,7 +30,6 @@ export default async function ServicePage({ params }: PageProps) {
   if (!service) notFound();
 
   const others = SERVICES.filter((s) => s.slug !== slug);
-
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -37,7 +37,7 @@ export default async function ServicePage({ params }: PageProps) {
     description: service.description,
     provider: {
       "@type": "AutoRepair",
-      name: "Riverdale Tires and Auto",
+      name: "Riverdale Tire & Auto",
       telephone: "+1 (901) 426-4572",
       address: { "@type": "PostalAddress", streetAddress: "5180 Riverdale Rd", addressLocality: "Memphis", addressRegion: "TN", postalCode: "38141", addressCountry: "US" },
     },
@@ -55,6 +55,29 @@ export default async function ServicePage({ params }: PageProps) {
     ],
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: service.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const reviewJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    provider: {
+      "@type": "AutoRepair",
+      name: "Riverdale Tire & Auto",
+      telephone: "+1 (901) 426-4572",
+      address: { "@type": "PostalAddress", streetAddress: "5180 Riverdale Rd", addressLocality: "Memphis", addressRegion: "TN", postalCode: "38141", addressCountry: "US" },
+      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.5", reviewCount: "239", bestRating: "5" },
+    },
+  };
+
   return (
     <>
       <script
@@ -64,6 +87,14 @@ export default async function ServicePage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
       />
       <section className="relative overflow-hidden pt-28 pb-12">
         <div className="blob right-[-10%] top-[-5%] h-[30rem] w-[30rem] bg-accent/15" />
@@ -95,7 +126,7 @@ export default async function ServicePage({ params }: PageProps) {
             <div className="relative overflow-hidden rounded-3xl border border-white/70 shadow-[0_24px_80px_rgba(30,58,95,0.18)]">
               <Image
                 src={service.image}
-                alt={`${service.title} — Riverdale Tires and Auto`}
+                alt={`${service.title} — Riverdale Tire & Auto`}
                 width={1200}
                 height={675}
                 className="h-[22rem] w-full object-cover"
@@ -136,6 +167,28 @@ export default async function ServicePage({ params }: PageProps) {
                 </StaggerItem>
               ))}
             </Stagger>
+
+            <FadeUp className="mt-10">
+              <h2 className="text-2xl font-bold text-primary">Common questions</h2>
+            </FadeUp>
+            <FadeUp className="mt-6">
+              <Accordion type="single" collapsible className="w-full space-y-3">
+                {service.faqs.map((f, i) => (
+                  <AccordionItem
+                    key={i}
+                    value={`faq-${i}`}
+                    className="glass rounded-2xl border !border-primary/10 px-5"
+                  >
+                    <AccordionTrigger className="text-left font-semibold text-primary">
+                      {f.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                      {f.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </FadeUp>
           </div>
 
           <aside className="lg:col-span-2">
