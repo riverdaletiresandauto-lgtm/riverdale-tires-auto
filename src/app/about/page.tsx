@@ -54,7 +54,7 @@ const aboutJsonLd = {
   },
   areaServed: ["Memphis", "West Tennessee", "North Mississippi", "East Arkansas"],
   sameAs: [
-    "https://www.facebook.com/Riverdaletireautotn/",
+    "https://www.facebook.com/riverdaletirenauto",
     "https://www.instagram.com/explore/locations/163643453825918/riverdale-tire-and-auto",
   ],
 };

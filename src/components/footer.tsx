@@ -105,7 +105,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-3">
             <a
-              href="https://www.facebook.com/Riverdaletireautotn/"
+              href="https://www.facebook.com/riverdaletirenauto"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary/15 bg-white/40 text-muted-foreground transition-all hover:border-primary/30 hover:text-primary"
