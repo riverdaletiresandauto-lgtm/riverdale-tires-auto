@@ -5,7 +5,7 @@ import { SERVICE_AREAS } from "@/lib/service-areas";
 const BASE = "https://riverdaletireandauto.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/services", "/about", "/pricing", "/testimonials", "/contact", "/privacy", "/terms", "/service-areas", "/blog"].map((r) => ({
+  const staticRoutes = ["", "/services", "/about", "/testimonials", "/contact", "/privacy", "/terms", "/service-areas", "/blog"].map((r) => ({
     url: `${BASE}${r}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
