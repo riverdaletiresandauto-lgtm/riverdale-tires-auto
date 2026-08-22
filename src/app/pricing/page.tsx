@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { ArrowRight, Check, PhoneCall, ShieldCheck, Truck, Wrench } from "lucide-react";
 import { COMPANY } from "@/lib/site-data";
 import { FadeUp, Stagger, StaggerItem, SectionHeading } from "@/components/motion";
@@ -131,6 +132,8 @@ const PLANS = [
 ];
 
 export default function PricingPage() {
+  // Page hidden while pricing model is being reworked — code preserved below.
+  notFound();
   return (
     <>
       <script
